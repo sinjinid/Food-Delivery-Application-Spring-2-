@@ -27,8 +27,8 @@ import com.sun.istack.Nullable;
 @Entity
 @Table(name="view_order", schema = "public")
 public class Order implements Serializable{
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(nullable=false)
 	private int order_id;
 	
