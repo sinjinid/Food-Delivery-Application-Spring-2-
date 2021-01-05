@@ -1,0 +1,31 @@
+package com.sprint.service;
+
+import java.util.HashMap;
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.sprint.repository.MenuRepository;
+
+
+@Transactional
+@Service
+public class MenuServiceImpl implements MenuService{
+
+	HashMap<String,Double> selectedMenu = new HashMap<String,Double>();
+	@Autowired
+	MenuRepository mRepo;
+	
+
+	@Override
+	public List<String> getMenu() {
+		List<String> menu = mRepo.getMenu();
+		return menu;
+	}
+
+
+
+}
